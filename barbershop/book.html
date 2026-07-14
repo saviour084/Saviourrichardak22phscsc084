@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Book Now - DE-EMPIRES BARBING STUDIO</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>DE-EMPIRES BARBING STUDIO</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="service.html">Services</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="book.html">Book Now</a>
+  </nav>
+</header>
+<section class="hero">
+  <h2>Book Your Appointment</h2>
+  <p>Fill the form below — it opens WhatsApp so we can confirm your slot.</p>
+</section>
+<section class="info">
+  <form class="booking-form" id="bookingForm">
+    <label for="name">Full Name</label>
+    <input type="text" id="name" required>
+    <label for="phone">Phone Number</label>
+    <input type="tel" id="phone" required>
+    <label for="service">Service</label>
+    <select id="service" required>
+      <option value="">-- Select a service --</option>
+      <option value="Low Cut">Low Cut - ₦1,500</option>
+      <option value="Fade">Fade - ₦2,000</option>
+      <option value="Beard Trim">Beard Trim - ₦1,000</option>
+      <option value="Fade + Beard Combo">Fade + Beard Combo - ₦2,800</option>
+      <option value="Kids Cut">Kids Cut - ₦1,200</option>
+      <option value="Line Up">Line Up / Edge Up - ₦700</option>
+    </select>
+    <label for="date">Preferred Date</label>
+    <input type="date" id="date" required>
+    <label for="time">Preferred Time</label>
+    <input type="time" id="time" required>
+    <button type="submit" class="btn">Book via WhatsApp</button>
+  </form>
+</section>
+<footer>
+  <p>&copy; 2026 DE-EMPIRES BARBING STUDIO</p>
+</footer>
+<script>
+  document.getElementById('bookingForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    var name = document.getElementById('name').value;
+    var phone = document.getElementById('phone').value;
+    var service = document.getElementById('service').value;
+    var date = document.getElementById('date').value;
+    var time = document.getElementById('time').value;
+    var whatsappNumber = "2349161718660"; // replace with your real WhatsApp number
+    var message = "Hello DE-EMPIRES, I'd like to book an appointment.%0A" +
+                  "Name: " + name + "%0A" +
+                  "Phone: " + phone + "%0A" +
+                  "Service: " + service + "%0A" +
+                  "Date: " + date + "%0A" +
+                  "Time: " + time;
+    var url = "https://wa.me/" + whatsappNumber + "?text=" + message;
+    window.open(url, "_blank");
+  });
+</script>
+</body>
+</html>

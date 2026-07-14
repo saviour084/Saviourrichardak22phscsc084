@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>DE-EMPIRES STORE</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<header>
+  <a href="../index.html" class="back-btn">← </a>
+  <h1>DE-EMPIRES STORE</h1>
+  <p>Barbering tools and grooming equipment</p>
+</header>
+
+<section class="products">
+  <h2>Our Products</h2>
+  <div class="product-grid" id="productGrid">
+
+    <div class="product-card">
+      <i class="fa-solid fa-scissors product-icon"></i>
+      <h3>Hair Clipper</h3>
+      <p>₦25,000</p>
+      <button class="add-btn" data-name="Hair Clipper" data-price="25000">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <i class="fa-solid fa-cut product-icon"></i>
+      <h3>Trimmer (Edger)</h3>
+      <p>₦18,000</p>
+      <button class="add-btn" data-name="Trimmer" data-price="18000">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <i class="fa-solid fa-hand-scissors product-icon"></i>
+      <h3>Hair-Cutting Scissors</h3>
+      <p>₦8,500</p>
+      <button class="add-btn" data-name="Hair-Cutting Scissors" data-price="8500">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <i class="fa-solid fa-khanda product-icon"></i>
+      <h3>Straight Razor (Shavette)</h3>
+      <p>₦6,000</p>
+      <button class="add-btn" data-name="Straight Razor" data-price="6000">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <i class="fa-solid fa-layer-group product-icon"></i>
+      <h3>Razor Blades (Pack)</h3>
+      <p>₦1,000</p>
+      <button class="add-btn" data-name="Razor Blades" data-price="1000">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <i class="fa-solid fa-grip-lines-vertical product-icon"></i>
+      <h3>Cutting Comb</h3>
+      <p>₦800</p>
+      <button class="add-btn" data-name="Cutting Comb" data-price="800">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <i class="fa-solid fa-broom product-icon"></i>
+      <h3>Fade Brush</h3>
+      <p>₦1,500</p>
+      <button class="add-btn" data-name="Fade Brush" data-price="1500">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <i class="fa-solid fa-user-tie product-icon"></i>
+      <h3>Barber Cape</h3>
+      <p>₦4,500</p>
+      <button class="add-btn" data-name="Barber Cape" data-price="4500">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <i class="fa-solid fa-receipt product-icon"></i>
+      <h3>Disposable Neck Strips</h3>
+      <p>₦500</p>
+      <button class="add-btn" data-name="Neck Strips" data-price="500">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <i class="fa-solid fa-spray-can product-icon"></i>
+      <h3>Spray Bottle</h3>
+      <p>₦1,200</p>
+      <button class="add-btn" data-name="Spray Bottle" data-price="1200">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <i class="fa-solid fa-wind product-icon"></i>
+      <h3>Hair Dryer</h3>
+      <p>₦15,000</p>
+      <button class="add-btn" data-name="Hair Dryer" data-price="15000">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <i class="fa-solid fa-chair product-icon"></i>
+      <h3>Barber Chair</h3>
+      <p>₦180,000</p>
+      <button class="add-btn" data-name="Barber Chair" data-price="180000">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <i class="fa-solid fa-vector-square product-icon"></i>
+      <h3>Wall Mirror</h3>
+      <p>₦20,000</p>
+      <button class="add-btn" data-name="Wall Mirror" data-price="20000">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <i class="fa-solid fa-droplet product-icon"></i>
+      <h3>Clipper Oil</h3>
+      <p>₦1,000</p>
+      <button class="add-btn" data-name="Clipper Oil" data-price="1000">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+      <i class="fa-solid fa-pump-soap product-icon"></i>
+      <h3>Blade Disinfectant</h3>
+      <p>₦2,000</p>
+      <button class="add-btn" data-name="Blade Disinfectant" data-price="2000">Add to Cart</button>
+    </div>
+
+  </div>
+</section>
+
+<section class="cart">
+  <h2>Your Cart</h2>
+  <ul id="cartList"></ul>
+  <h3>Total: ₦<span id="cartTotal">0</span></h3>
+  <button id="checkoutBtn" class="btn">Checkout</button>
+</section>
+
+<div id="checkoutForm" class="checkout-form hidden">
+  <h2>Checkout</h2>
+  <label for="custName">Full Name</label>
+  <input type="text" id="custName" required>
+  <label for="custPhone">Phone Number</label>
+  <input type="tel" id="custPhone" required>
+  <label for="custAddress">Delivery Address</label>
+  <input type="text" id="custAddress" required>
+  <button id="confirmOrderBtn" class="btn">Confirm Order</button>
+</div>
+
+<footer>
+  <p>&copy; 2026 DE-EMPIRES STORE</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
