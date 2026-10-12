@@ -1,0 +1,86 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #1b2a4a, #3a5a8c);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 36px 32px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.4rem;
+  color: #1b2a4a;
+  margin-bottom: 24px;
+}
+
+label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 6px;
+}
+
+input[type="number"], select {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-bottom: 18px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+input[type="number"]:focus, select:focus {
+  border-color: #1b2a4a;
+}
+
+button {
+  width: 100%;
+  padding: 13px;
+  background: #1b2a4a;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 18px;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #12203a;
+}
+
+.result-box {
+  background: #eef2fa;
+  border: 2px solid #3a5a8c;
+  border-radius: 8px;
+  padding: 14px;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1b2a4a;
+  min-height: 24px;
+}
+
+.error {
+  color: #c0392b;
+  border-color: #c0392b;
+  background: #fdf0ef;
+}
